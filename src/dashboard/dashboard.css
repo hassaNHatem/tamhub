@@ -3,4 +3,35 @@
     top: 100px;
     left: 18%;
     position:absolute;
+    width: 75%;
+}
+.charts-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.charts-wrapper div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 20%;
+    height: 266px;
+    border-radius: 10px;
+}
+.charts-wrapper div:first-of-type{
+    background-color: #A162F7;
+}
+.charts-wrapper div p:first-of-type{
+    margin-bottom: 2%;
+}
+.charts-wrapper div h4{
+    font-size: 24px;
+    font-family: 'DM sans';
+    margin-bottom: 5%;
+   color: #242731;
+}
+.charts-wrapper div:first-of-type h4{
+    color: #FFFFFF;
 }
