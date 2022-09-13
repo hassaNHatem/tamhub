@@ -6,6 +6,7 @@
     width: 75%;
 }
 .charts-wrapper{
+    margin-bottom: 5%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -34,4 +35,33 @@
 }
 .charts-wrapper div:first-of-type h4{
     color: #FFFFFF;
+}
+.Loan{
+    padding: 3%;
+    justify-content: space-between;
+    background-color: #FFE0BA;
+    display: flex;
+    width: 50%;
+    border-radius: 5px;
+}
+.Loan .apply-for-laon h2{
+    font-size: 24px;
+    color: #0F2837;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.Loan .apply-for-laon p{
+    font-size: 16px;
+    color: #0F2837;
+    margin-bottom: 10%;
+}
+.Loan .apply-for-laon button{
+    margin-top: 5%;
+    background-color: #0F2837;
+    border-radius: 4px;
+    padding: 12px 24px 12px 24px;
+    height: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: Bold;
 }

@@ -1,4 +1,5 @@
 import ChartComponent from '../components/ChartComponent';
+import Loan from '../components/Loan';
 import './dashboard.css';
 
 function Dashboard() {
@@ -60,6 +61,9 @@ const tierPie = <svg width="112" height="113" viewBox="0 0 112 113" fill="none" 
         <ChartComponent icon = {range} chartName={'Range'} chart={fluidPie}></ChartComponent>
         <ChartComponent icon = {fluid} chartName={'Break fluid'} chart = {breakPie}></ChartComponent>
         <ChartComponent icon = {tier} chartName={'Tier Wear'} chart = {tierPie}></ChartComponent>
+      </div>
+      <div className='middle-section'>
+        <Loan/>
       </div>
   
     </div>
