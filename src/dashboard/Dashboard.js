@@ -1,7 +1,9 @@
 import ChartComponent from '../components/ChartComponent';
+import Earnings from '../components/Earnings';
 import Loan from '../components/Loan';
 import './dashboard.css';
-
+import { badges  } from './svgs';
+import { rushing } from './svgs';
 function Dashboard() {
   const energyIcon = <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="19" cy="19.5" r="19" fill="#A66FF0"/>
@@ -62,8 +64,12 @@ const tierPie = <svg width="112" height="113" viewBox="0 0 112 113" fill="none" 
         <ChartComponent icon = {fluid} chartName={'Break fluid'} chart = {breakPie}></ChartComponent>
         <ChartComponent icon = {tier} chartName={'Tier Wear'} chart = {tierPie}></ChartComponent>
       </div>
+      
       <div className='middle-section'>
         <Loan/>
+        <Earnings number={'20'} logo={badges} bgColor={'#0F2837'} fontColor={'#FF9619'} msg={'Hooray! Way to go Mohammed!'} />
+        <Earnings number={'1500'} logo={rushing} bgColor={'#6E1946'} fontColor={'#FAC39B'} msg={'Reedem and claim your rewards!'} />
+        
       </div>
   
     </div>

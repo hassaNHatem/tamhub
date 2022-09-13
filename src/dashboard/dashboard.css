@@ -65,3 +65,25 @@
     font-size: 12px;
     font-weight: Bold;
 }
+.middle-section{
+    display: flex;
+    justify-content: space-between;
+}
+.earnings-container{
+    width: 20%;
+    border-radius: 5px;
+    padding: 2%;
+}
+.earnings{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15%;
+}
+.earned{
+    font-size: 24px;
+    color: white;
+}
+.earned span{
+font-size: 40px;
+font-weight: bold;
+}
