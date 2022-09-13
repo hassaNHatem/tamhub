@@ -3,6 +3,7 @@ import Dashboard from './dashboard/Dashboard';
 import Login from './login/Login';
 import Cars from './cars/Cars';
 import Layout from './Layout/Layout';
+import "@fontsource/dm-sans";
 import {
   BrowserRouter as Router,
   Routes,

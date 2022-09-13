@@ -1,0 +1,117 @@
+.login-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-container{  
+    height: 50%;
+  width: 506px;
+}
+.login-container .heading{
+    font-size: 30px;
+    color:#242731;
+    line-height: 35px;
+    text-align: left;
+    font-style: bold;
+    font-family:'DM Sans';
+    margin-bottom: 5%;
+}
+.login-container .no-account{
+    font-size: 18px;
+    text-align: left;
+    font-family:'DM Sans';
+    color: #7C7C8D;
+    margin-bottom: 5%;
+}
+.no-account span{
+    color: #A162F7;
+}
+.no-account span:hover{
+    cursor: pointer;
+}
+.input-container{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 20px rgba(59, 59, 59, 0.08);
+    padding: 3%;
+}
+.input-container .email h5{
+    font-family:'DM Sans';
+    font-style: normal;
+    line-height: 21px;
+    font-size: 16px;
+    color: #242731;
+    margin-bottom: 4%;
+}
+.input-container .email input{
+    width: 100%;
+    height: 59px;
+    border-radius: 10px;
+    border: 1px solid #B1B5C3;
+    padding-left: 5%;
+    margin-bottom: 5%;
+}
+
+.input-container .password h5{
+    font-family:'DM Sans';
+    font-style: normal;
+    line-height: 21px;
+    font-size: 16px;
+    color: #242731;
+    margin-bottom: 4%;
+}
+.input-container .password input{
+    width: 100%;
+    height: 59px;
+    border-radius: 10px;
+    border: 1px solid #B1B5C3;
+    padding-left: 5%;
+}
+.passowrd-input-wrapper{
+    position: relative;
+}
+.eyeIcon{
+    position:absolute;
+    top: 35%;
+    right: 2%;
+}
+.forget-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.forget-container .remember{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 22%;
+    color: #B1B5C3;
+    font-family:'DM Sans' ;
+    font-size: 16px;
+    line-height: 21px;
+}
+.forget-container .forgot{
+    font-family:'DM Sans' ;
+    font-size: 16px;
+    line-height: 21px;
+    color: #A162F7;
+}
+.forget-container .forgot:hover{
+    cursor: pointer;
+}
+.sign-in{
+    width: 100%;
+    background-color: #A162F7;
+    color: #FFFAF7;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    font-family:'DM Sans';
+    height: 60px;
+    border-radius: 10px;
+    border-color: transparent;
+    
+}
