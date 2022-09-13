@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 function App() {
   localStorage.setItem('person','soemthing')
-  localStorage.clear()
+  // localStorage.clear()
   const user = localStorage.getItem('person')
   console.log(user)
   return (

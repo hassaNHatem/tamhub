@@ -2,8 +2,10 @@ import './dashboard.css';
 
 function Dashboard() {
   return (
-    <div className="App">
+   
+    <div className="dashboard">
     dashboard
+  
     </div>
   );
 }
