@@ -14,13 +14,13 @@
     height: 78px;
     padding: 15px 31px 15px 31px;
     right: 0;
-
+    border-left: 1px solid #F5F5F5;
 }
 .sidebar{
     position: absolute;
     width: 15%;
     height: 100%;
-    background-color: blue;
+    background-color: white;
 }
 .searchbar{
     height: 46px;
@@ -48,4 +48,45 @@
 }
 .profile img{
     border-radius: 50%;
+}
+/*sidebar*/
+.sidebar{
+    padding: 30px 24px 30px 24px;
+
+}
+.sidebar h1{
+    margin-bottom: 5%;
+}
+.menu-items div{
+    padding: 2%;
+    border-radius: 8px;
+    height: 34px;
+    display: flex;
+    width: 250px;
+    align-items: center;
+}
+.menu-items .active{
+    background-color: #F5F5F5;
+}
+.menu-items h2{
+    margin-left: 5%;
+    text-align: center;
+    color: #5F6165;
+    font-size: 14px;
+}
+.sidebar-footer{
+    position:absolute;
+    bottom: 2%;
+    
+}
+.sidebar-footer h2{
+    margin-left: 3%;
+    text-align: center;
+    color: #5F6165;
+    font-size: 14px;
+}
+.sidebar-footer div{
+    height: 34px;
+    display: flex;
+    align-items: center;
 }
