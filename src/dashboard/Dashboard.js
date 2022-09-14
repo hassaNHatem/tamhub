@@ -1,9 +1,11 @@
 import ChartComponent from '../components/ChartComponent';
 import Earnings from '../components/Earnings';
 import Loan from '../components/Loan';
+import Recommended from '../components/Recommended';
 import './dashboard.css';
 import { badges  } from './svgs';
 import { rushing } from './svgs';
+import car1 from '../car1.png'
 function Dashboard() {
   const energyIcon = <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="19" cy="19.5" r="19" fill="#A66FF0"/>
@@ -69,7 +71,12 @@ const tierPie = <svg width="112" height="113" viewBox="0 0 112 113" fill="none" 
         <Loan/>
         <Earnings number={'20'} logo={badges} bgColor={'#0F2837'} fontColor={'#FF9619'} msg={'Hooray! Way to go Mohammed!'} />
         <Earnings number={'1500'} logo={rushing} bgColor={'#6E1946'} fontColor={'#FAC39B'} msg={'Reedem and claim your rewards!'} />
-        
+      </div>
+      <div className='lower-section'>
+        <Recommended percent={'64'}  src={car1} name={'Mini Cooper'} miles={'132'} price={'32'} bgColor={'#E1DFA4'}/>
+        <Recommended percent={'64'}  src={car1} name={'Mini Cooper'} miles={'132'} price={'32'} bgColor={'#E3ECF1'}/>
+        <Recommended percent={'64'}  src={car1} name={'Mini Cooper'} miles={'132'} price={'32'} bgColor={'#F4E3E5'}/>
+
       </div>
   
     </div>

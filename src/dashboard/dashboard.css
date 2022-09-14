@@ -1,12 +1,13 @@
 
 .dashboard{
-    top: 100px;
+    top: 90px;
     left: 18%;
     position:absolute;
     width: 75%;
+    
 }
 .charts-wrapper{
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -66,6 +67,7 @@
     font-weight: Bold;
 }
 .middle-section{
+    margin-bottom: 2%;
     display: flex;
     justify-content: space-between;
 }
@@ -86,4 +88,51 @@
 .earned span{
 font-size: 40px;
 font-weight: bold;
+}
+.lower-section{
+    display: flex;
+    justify-content: space-between;
+}
+.recommend-wrapper{
+    width: 30%;
+    padding: 15px 27px 15px 27px;
+    border-radius: 14px;
+}
+.recommend{
+    width: 90%;
+    margin: 0 auto;
+    height: 200px;
+
+}
+.recommend .heading{
+    display: flex;
+    align-items: flex-start;
+    font-size: 16px;
+    font-family: 'DM Sans';
+    color: #242731;
+}
+.recommend .heading span{
+    margin-right: 2%;
+}
+.recommend img{
+    margin: 0 auto;
+    display: block;
+}
+.recommend .car-name{
+    margin-bottom: 1%;
+    font-size: 20px;
+    font-family: 'DM Sans';
+    color: #1F2128;
+}
+.recommend .car-info{
+    font-size: 14px;
+    font-family: 'DM Sans';
+    color: #72767C;
+    display: flex;
+    justify-content: space-between;
+}
+.recommend .car-info .left-side{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
 }
