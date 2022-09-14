@@ -37,9 +37,9 @@ function App() {
           </Routes>
         ) : (
           <Routes>
-      <Route path="/" element={ <><Layout/><Dashboard/></>} />
-      <Route path="/dashboard" element={  <><Layout/><Dashboard/></>} />
-      <Route path="/cars" element={  <><Layout/><Cars cars={cars}/></>} />
+      <Route path="/" element={ <><Layout setUser={setUser}/><Dashboard/></>} />
+      <Route path="/dashboard" element={  <><Layout setUser={setUser}/><Dashboard/></>} />
+      <Route path="/cars" element={  <><Layout setUser={setUser}/><Cars cars={cars}/></>} />
       </Routes>
       )}
       </Router>
