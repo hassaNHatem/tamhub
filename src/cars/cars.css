@@ -2,7 +2,13 @@
     top: 90px;
     left: 18%;
     position:absolute;
+    background-color: #F5F5F5;
+
     width: 75%;
+}
+.cars-wrapper{
+    background-color: #F5F5F5;
+
 }
 .cars-wrapper .heading{
     font-size: 30px;

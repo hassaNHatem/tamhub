@@ -1,14 +1,13 @@
 import CarCard from "./CarCard"
 
-function CarsGrid() {
+function CarsGrid({cars}) {
+    console.log(cars)
     return(
         <div className="cars-grid">
-            <CarCard></CarCard>
-            <CarCard></CarCard>
-            <CarCard></CarCard>
-            <CarCard></CarCard>
-            <CarCard></CarCard>
-            <CarCard></CarCard>
+            {cars.map(el=>{
+                return <CarCard car={el}></CarCard>
+            })}
+           
         </div>
     )
 }

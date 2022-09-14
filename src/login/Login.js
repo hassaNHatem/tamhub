@@ -1,17 +1,10 @@
-import axios from 'axios';
-import { useState , useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useState  } from 'react';
 import './login.css';
 import {eyeIcon} from './svgs'
-function Login({setUser}) {
-  const [users , setUsers] = useState([])
+function Login({setUser , users}) {
   const [userName , setUserName] = useState('')
   const [password , setPassword] = useState('')
-  useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/hassaNHatem/mockdata/users').then(res=>{
-      setUsers(res.data)
-    })
-  }, [])
+  
  function checkValidity(userName , password){
   let isvalid = false
   let user = users.filter((el)=>{

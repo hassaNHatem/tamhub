@@ -1,7 +1,7 @@
 import CarsGrid from '../components/CarsGrid';
 import './cars.css';
 import {squares , filter , arrow} from './svgs'
-function Cars() {
+function Cars({cars}) {
   return (
     <div className="cars-wrapper">
     <h1 className='heading'>Booking</h1>
@@ -30,7 +30,7 @@ function Cars() {
         <h4 style={{'height':'30px'}}>{filter}</h4>
       </div>
     </div>
-    <CarsGrid/>
+    <CarsGrid cars={cars}/>
     </div>
   );
 }
