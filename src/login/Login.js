@@ -1,10 +1,40 @@
+import axios from 'axios';
+import { useState , useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
 import './login.css';
-
-function Login() {
-  const eyeIcon = <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M19.9165 8.1C17.8972 3.41 14.0986 0.5 10 0.5C5.90143 0.5 2.10275 3.41 0.0834557 8.1C0.0284116 8.22617 0 8.36234 0 8.5C0 8.63766 0.0284116 8.77383 0.0834557 8.9C2.10275 13.59 5.90143 16.5 10 16.5C14.0986 16.5 17.8972 13.59 19.9165 8.9C19.9716 8.77383 20 8.63766 20 8.5C20 8.36234 19.9716 8.22617 19.9165 8.1V8.1ZM10 14.5C6.8311 14.5 3.83215 12.21 2.10275 8.5C3.83215 4.79 6.8311 2.5 10 2.5C13.1689 2.5 16.1679 4.79 17.8972 8.5C16.1679 12.21 13.1689 14.5 10 14.5ZM10 4.5C9.20915 4.5 8.43606 4.7346 7.77849 5.17412C7.12093 5.61365 6.60841 6.23836 6.30577 6.96927C6.00312 7.70017 5.92394 8.50444 6.07823 9.28036C6.23251 10.0563 6.61334 10.769 7.17256 11.3284C7.73177 11.8878 8.44426 12.2688 9.21991 12.4231C9.99556 12.5775 10.7996 12.4983 11.5302 12.1955C12.2609 11.8928 12.8853 11.3801 13.3247 10.7223C13.7641 10.0645 13.9986 9.29113 13.9986 8.5C13.9986 7.43913 13.5773 6.42172 12.8274 5.67157C12.0776 4.92143 11.0605 4.5 10 4.5V4.5ZM10 10.5C9.60458 10.5 9.21803 10.3827 8.88925 10.1629C8.56046 9.94318 8.30421 9.63082 8.15288 9.26537C8.00156 8.89991 7.96197 8.49778 8.03911 8.10982C8.11626 7.72186 8.30667 7.36549 8.58628 7.08579C8.86589 6.80608 9.22213 6.6156 9.60996 6.53843C9.99778 6.46126 10.3998 6.50087 10.7651 6.65224C11.1304 6.80362 11.4427 7.05996 11.6624 7.38886C11.882 7.71776 11.9993 8.10444 11.9993 8.5C11.9993 9.03043 11.7887 9.53914 11.4137 9.91421C11.0388 10.2893 10.5302 10.5 10 10.5Z" fill="#777E91"/>
-  </svg>
-  
+import {eyeIcon} from './svgs'
+function Login({setUser}) {
+  const [users , setUsers] = useState([])
+  const [userName , setUserName] = useState('')
+  const [password , setPassword] = useState('')
+  useEffect(() => {
+    axios.get('https://my-json-server.typicode.com/hassaNHatem/mockdata/users').then(res=>{
+      setUsers(res.data)
+    })
+  }, [])
+ function checkValidity(userName , password){
+  let isvalid = false
+  let user = users.filter((el)=>{
+    return el.userName===userName
+  })[0]
+  if(user){
+    if(password===user.password){
+      isvalid = true
+    }}
+  return isvalid
+ }
+ function login(username , password){
+  let isValid = checkValidity(username , password)
+  if(userName==='' ||password===''){
+    alert('empty username or password')
+  }else
+  if(isValid){
+    localStorage.setItem('user' , username)
+    setUser(username)   
+  }else{
+    alert('incorrect username or password')
+  }
+ }
   return (
     <div className='login-wrapper'>
     <div className="login-container">
@@ -13,12 +43,12 @@ function Login() {
      <div className='input-container'>
       <div className='email'>
         <h5>Email</h5>
-        <input placeholder='uistore@gmail.com'></input>
+        <input value={userName} placeholder='uistore@gmail.com' onChange={(e)=>setUserName(e.target.value)}></input>
       </div>
       <div className='password'>
         <h5>Password</h5>
         <div className='passowrd-input-wrapper'>
-        <input placeholder='*******'></input>
+        <input value={password} type={'password'} placeholder='*******' onChange={(e)=>setPassword(e.target.value)}></input>
         <p className='eyeIcon'>{eyeIcon}</p>
         </div>
       </div>
@@ -32,7 +62,9 @@ function Login() {
         <h5>Forgot your password?</h5>
       </div>
      </div>
-     <button className='sign-in'>Sign in</button>
+     <button className='sign-in' onClick={()=>{
+        login(userName , password)
+     }}>Sign in</button>
     </div>
     </div>
   );

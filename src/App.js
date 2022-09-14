@@ -2,6 +2,7 @@ import './App.css';
 import Dashboard from './dashboard/Dashboard';
 import Login from './login/Login';
 import Cars from './cars/Cars';
+import { useState  } from 'react';
 import Layout from './Layout/Layout';
 import "@fontsource/dm-sans";
 import {
@@ -11,9 +12,9 @@ import {
   Navigate
 } from "react-router-dom";
 function App() {
-  localStorage.setItem('person','soemthing')
-  // localStorage.clear()
-  const user = localStorage.getItem('person')
+  const [User , setUser] = useState()
+
+  const user = localStorage.getItem('user')
   console.log(user)
   return (
     <div className="App">
@@ -21,7 +22,7 @@ function App() {
       {user === null ? (
           <Routes>
             <Route path="*" element={<Navigate to="/" />} />
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Login setUser={setUser} />} />
           </Routes>
         ) : (
           <Routes>
