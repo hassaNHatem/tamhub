@@ -48,3 +48,61 @@
     justify-content: space-between;
     align-items: center;
 }
+.cars-grid{
+    width: 100%;
+    margin-top: 3%;
+    column-gap: 2%;
+    display: grid;
+    row-gap: 4%;
+    grid-template-columns: auto auto auto;
+}
+.car-card{
+    border-radius: 16px;
+    width: 100%;
+    padding: 24px;
+    background-color: white;
+}
+.car-card .heading{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-family:'DM Sans';
+    color: #242731;
+    line-height: 23px;
+}
+.car-model{
+    font-size: 16px;
+    font-family:'DM Sans';
+    color: #72767C;
+}
+.car-card img{
+    display: block;
+    margin: 0 auto;
+}
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+.card-footer .left-side{
+    display: flex;
+    align-items: center;
+}
+.card-footer .left-side h4{
+    display: flex;
+    font-size: 16px;
+    font-family:'DM Sans';
+    margin-right: 10%;
+    color: #72767C;
+    
+}
+.card-footer .price{
+    color: #72767C;
+    font-size: 18px;
+    font-family:'DM Sans';
+}
+.card-footer .price span{
+    color: #242731
+    ;
+}
