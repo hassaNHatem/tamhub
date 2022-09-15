@@ -115,3 +115,8 @@
     border-color: transparent;
     
 }
+@media screen and (max-width: 430px) {
+    .forget-container .remember{
+        flex-basis: 35%;
+    }
+  }

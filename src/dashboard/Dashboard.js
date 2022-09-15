@@ -68,9 +68,9 @@ const tierPie = <svg width="112" height="113" viewBox="0 0 112 113" fill="none" 
       </div>
       
       <div className='middle-section'>
-        <Loan/>
-        <Earnings number={'20'} logo={badges} bgColor={'#0F2837'} fontColor={'#FF9619'} msg={'Hooray! Way to go Mohammed!'} />
-        <Earnings number={'1500'} logo={rushing} bgColor={'#6E1946'} fontColor={'#FAC39B'} msg={'Reedem and claim your rewards!'} />
+       <Loan/>
+       <div className='earning-wrapper'><Earnings number={'20'} logo={badges} bgColor={'#0F2837'} fontColor={'#FF9619'} msg={'Hooray! Way to go Mohammed!'} />
+        <Earnings number={'1500'} logo={rushing} bgColor={'#6E1946'} fontColor={'#FAC39B'} msg={'Reedem and claim your rewards!'} /></div>
       </div>
       <div className='lower-section'>
         <Recommended percent={'64'}  src={car1} name={'Mini Cooper'} miles={'132'} price={'32'} bgColor={'#E1DFA4'}/>

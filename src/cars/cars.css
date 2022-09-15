@@ -112,3 +112,14 @@
     color: #242731
     ;
 }
+@media screen and (max-width: 770px) {
+    .cars-grid{
+    grid-template-columns: auto auto ;}
+
+}
+@media screen and (max-width: 430px) {
+    .cars-grid{
+        grid-template-columns: auto  ;
+        row-gap: 1%;
+    }
+}

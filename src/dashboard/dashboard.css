@@ -3,15 +3,17 @@
     top: 90px;
     left: 18%;
     position:absolute;
-    width: 75%;
+    width: 80%;
     background-color: #F5F5F5;
     
 }
 .charts-wrapper{
     margin-bottom: 2%;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5%;
+    
 }
 .charts-wrapper div{
     display: flex;
@@ -19,7 +21,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 20%;
+    width: 100%;
     height: 266px;
     border-radius: 10px;
 }
@@ -39,6 +41,7 @@
     color: #FFFFFF;
 }
 .Loan{
+    overflow: hidden;
     padding: 3%;
     justify-content: space-between;
     background-color: #FFE0BA;
@@ -72,8 +75,13 @@
     display: flex;
     justify-content: space-between;
 }
+.earning-wrapper{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
 .earnings-container{
-    width: 20%;
+    width: 45%;
     border-radius: 5px;
     padding: 2%;
 }
@@ -91,11 +99,14 @@ font-size: 40px;
 font-weight: bold;
 }
 .lower-section{
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5%;
+
 }
 .recommend-wrapper{
-    width: 30%;
+   
     padding: 15px 27px 15px 27px;
     border-radius: 14px;
 }
@@ -137,3 +148,55 @@ font-weight: bold;
     justify-content: space-between;
     width: 40%;
 }
+@media screen and (max-width: 1030px) {
+    .middle-section{
+        flex-direction: column;
+    }
+    .Loan{
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    .earning-wrapper{
+        width: 100%;
+    }
+    .dashboard{
+        left: 20%;
+    }
+    .lower-section{
+        grid-template-columns: auto auto
+    }
+    .recommend-wrapper:last-of-type{
+        margin-top: 5%;
+    }
+  }
+  @media screen and (max-width: 770px) {
+    .dashboard{
+        width: 85%;
+        left: 15%;
+    }
+    .lower-section{
+        grid-template-columns: auto 
+    }
+    .recommend-wrapper:first-of-type{
+        margin-bottom: 5%;
+    }
+    .charts-wrapper{
+        grid-template-columns: auto auto;
+    }
+    .charts-wrapper div:first-of-type{
+        margin-bottom: 5%;
+    }
+  
+  }
+  
+  @media screen and (max-width: 430px) {
+    .earning-wrapper{
+        flex-direction: column;
+    }
+    .earnings-container{
+        width: 100%;
+    }
+    .earnings-container:first-of-type{
+        margin-bottom: 3%;
+    }
+  }
