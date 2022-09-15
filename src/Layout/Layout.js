@@ -1,7 +1,7 @@
 import './layout.css';
 import person from '../person.png'
 import { Link } from 'react-router-dom';
-import {lens , pell , logo , dashboard , car , sittings , logout} from './svgs'
+import {lens , pell , logo , dashboard , car , sittings , logout, miniLogo} from './svgs'
 function Layout({setUser , pageName , setSearchInput}) {
   return (
    <div className='layout-wrapper'>
@@ -16,7 +16,7 @@ function Layout({setUser , pageName , setSearchInput}) {
     </div>
    </div>
    <div className='sidebar'>
-      <h1>{logo}</h1>
+      <h1>{window.innerWidth>770?logo:miniLogo}</h1>
       <div className='menu-items'>
       <Link to={'/dashboard'}><div className={window.location.href.includes('dashboard')||window.location.href[window.location.href.length-1]==='/'?'active':''}>{dashboard}<h2 > Dashboard</h2></div></Link>
       <Link to={'/cars'}><div className={window.location.href.includes('cars')?'active':''}>{car}<h2> Cars</h2></div></Link>
