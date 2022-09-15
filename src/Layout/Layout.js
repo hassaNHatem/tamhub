@@ -2,13 +2,13 @@ import './layout.css';
 import person from '../person.png'
 import { Link } from 'react-router-dom';
 import {lens , pell , logo , dashboard , car , sittings , logout} from './svgs'
-function Layout({setUser}) {
+function Layout({setUser , pageName , setSearchInput}) {
   return (
    <div className='layout-wrapper'>
    <div className='nav'>
     <div className='searchbar'>
     <p className='lens'>{lens}</p>
-    <input placeholder='Search or type'></input>
+    <input placeholder='Search or type' disabled={pageName!=='cars'} onChange={(e)=>{setSearchInput(e.target.value)}}></input>
     </div>
     <div className='profile'>
         <p>{pell}</p>

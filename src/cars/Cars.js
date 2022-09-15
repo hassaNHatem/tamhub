@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import CarsGrid from '../components/CarsGrid';
 import './cars.css';
 import {squares , filter , arrow} from './svgs'
-function Cars({cars}) {
+function Cars({cars , searchInput}) {
   const [gear , setGear] = useState('all gears')
   const [company , setCompany] = useState('all')
   const [filteredCars , setFilteredCars] = useState(cars)
@@ -69,7 +69,7 @@ function Cars({cars}) {
         <h4 style={{'height':'30px'}}>{filter}</h4>
       </div>
     </div>
-    <CarsGrid cars={filteredCars} />
+    <CarsGrid cars={filteredCars} searchInput={searchInput} />
     </div>
   );
 }

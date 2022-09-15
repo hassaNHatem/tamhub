@@ -17,6 +17,7 @@ function App() {
   const [User , setUser] = useState()
   const [users , setUsers] = useState([])
   const [cars , setCars] = useState([])
+  const [searchInput , setSearchInput] = useState('')
   useEffect(() => {
     axios.get('https://my-json-server.typicode.com/hassaNHatem/mockdata/users').then(res=>{
       setUsers(res.data)
@@ -37,9 +38,9 @@ function App() {
           </Routes>
         ) : (
           <Routes>
-      <Route path="/" element={ <><Layout setUser={setUser}/><Dashboard/></>} />
-      <Route path="/dashboard" element={  <><Layout setUser={setUser}/><Dashboard/></>} />
-      <Route path="/cars" element={  <><Layout setUser={setUser}/><Cars cars={cars}/></>} />
+      <Route path="/" element={ <><Layout pageName={'dashboard'} setUser={setUser}/><Dashboard/></>} />
+      <Route path="/dashboard" element={  <><Layout setUser={setUser}/><Dashboard pageName={'dashboard'}/></>} />
+      <Route path="/cars" element={  <><Layout setSearchInput={setSearchInput} setUser={setUser} pageName={'cars'}/><Cars searchInput={searchInput} cars={cars}/></>} />
       </Routes>
       )}
       </Router>
